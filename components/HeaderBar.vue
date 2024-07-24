@@ -4,7 +4,7 @@
       class="mx-auto flex items-center justify-between mt-4 mb-4"
       aria-label="Global"
     >
-      <a href="/"><div class="font-bold text-3xl">Blog.</div></a>
+      <a href="/"><div class="font-bold text-3xl">Wanderlust.</div></a>
       <div class="flex lg:hidden">
         <button
           type="button"

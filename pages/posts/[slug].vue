@@ -3,10 +3,11 @@
     <h1 class="font-bold text-4xl my-14 text-balance text-center">
       {{ post.title }}
     </h1>
-    <div
-      class="prose prose-lg max-w-4xl content-div"
-      v-html="post.content"
-    ></div>
+    <!-- eslint-disable-next-line vue/no-v-html -->
+    <div class="prose prose-lg max-w-4xl content-div" v-html="post.content" />
+    <div class="my-8">
+      <TagList :tags="post.tags" />
+    </div>
   </div>
   <div v-else>
     <p>Loading...</p>

@@ -8,7 +8,7 @@
           :src="post.image"
           alt=""
           class="absolute h-full w-full rounded-2xl bg-gray-50 object-cover"
-        />
+        >
       </a>
       <div class="absolute rounded-2xl ring-1 ring-inset ring-gray-900/10" />
     </div>

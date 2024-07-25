@@ -8,7 +8,6 @@
     <div class="my-8">
       <TagList :tags="post.tags" />
     </div>
-    <hr class="my-10" />
     <div class="prose mx-auto max-w-none my-10">
       <h3>Also read</h3>
       <p v-for="relatedPost in relatedPosts" :key="relatedPost.id">

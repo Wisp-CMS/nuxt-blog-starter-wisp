@@ -19,7 +19,7 @@
             {{ format(post.createdAt, "MMMM dd, yyyy") }}
           </time>
         </div>
-        <div class="max-w-xl prose prose-a:no-underline">
+        <div class="prose prose-a:no-underline max-w-none">
           <h3 class="mt-3 line-clamp-2">
             <a :href="`/post/${post.slug}`">
               {{ post.title }}

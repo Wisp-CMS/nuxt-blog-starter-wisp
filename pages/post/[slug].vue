@@ -4,7 +4,7 @@
       {{ post.title }}
     </h1>
     <!-- eslint-disable-next-line vue/no-v-html -->
-    <div class="prose prose-lg max-w-4xl content-div" v-html="post.content" />
+    <div class="markdown-content" v-html="post.content" />
     <div class="my-8">
       <TagList :tags="post.tags" />
     </div>
@@ -33,9 +33,3 @@ const { posts: relatedPosts } = await wisp.getRelatedPosts({
   limit: 3,
 });
 </script>
-
-<style>
-.content-div img {
-  width: 100%;
-}
-</style>

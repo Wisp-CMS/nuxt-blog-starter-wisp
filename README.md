@@ -48,14 +48,13 @@ npm i
 bun i
 ```
 
-Then, update the blog id in the `plugins/wisp.ts` with the Blog ID obtained from wisp after you've created an account:
+Then, copy the .env.example file to .env:
 
-```bash
-export const wisp = buildWispClient({
-  baseUrl: "https://www.wisp.blog",
-  blogId: "<YOUR_BLOG_ID_HERE>",
-});
 ```
+cp .env.example .env
+```
+
+Note: You will need to populate the PUBLIC_BLOG_ID variable with the Blog ID obtained from wisp after you've created an account.
 
 Finally, run the development server:
 

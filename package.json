@@ -15,7 +15,7 @@
     "@headlessui/vue": "^1.7.22",
     "@heroicons/vue": "^2.1.5",
     "@nuxt/eslint": "^0.3.13",
-    "@wisp-cms/client": "^0.0.11",
+    "@wisp-cms/client": "^0.0.12",
     "date-fns": "^3.6.0",
     "markdown-it": "^14.1.0",
     "nuxt": "^3.12.4",

@@ -8,6 +8,15 @@
     <div class="my-8">
       <TagList :tags="post.tags" />
     </div>
+    <hr class="my-10" />
+    <div class="prose mx-auto max-w-none my-10">
+      <h3>Also read</h3>
+      <p v-for="relatedPost in relatedPosts" :key="relatedPost.id">
+        <NuxtLink :to="`/post/${relatedPost.slug}`">{{
+          relatedPost.title
+        }}</NuxtLink>
+      </p>
+    </div>
   </div>
   <div v-else>
     <p>Loading...</p>
@@ -20,6 +29,10 @@ import { useRoute } from "vue-router";
 
 const route = useRoute();
 const { post } = await wisp.getPost(route.params.slug);
+const { posts: relatedPosts } = await wisp.getRelatedPosts({
+  slug: route.params.slug,
+  limit: 3,
+});
 </script>
 
 <style>

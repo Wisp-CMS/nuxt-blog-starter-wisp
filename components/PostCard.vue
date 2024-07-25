@@ -3,12 +3,12 @@
     <div
       class="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0"
     >
-      <a :href="`/posts/${post.slug}`">
+      <a :href="`/post/${post.slug}`">
         <img
           :src="post.image"
           alt=""
           class="absolute h-full w-full rounded-2xl bg-gray-50 object-cover"
-        >
+        />
       </a>
       <div class="absolute rounded-2xl ring-1 ring-inset ring-gray-900/10" />
     </div>
@@ -19,16 +19,13 @@
             {{ format(post.createdAt, "MMMM dd, yyyy") }}
           </time>
         </div>
-        <div class="group relative max-w-xl">
-          <h3
-            class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600"
-          >
-            <a :href="`/posts/${post.slug}`">
-              <span class="absolute inset-0 line-clamp-2" />
+        <div class="max-w-xl prose prose-a:no-underline">
+          <h3 class="mt-3 line-clamp-2">
+            <a :href="`/post/${post.slug}`">
               {{ post.title }}
             </a>
           </h3>
-          <p class="mt-5 text-sm leading-6 text-gray-600 line-clamp-4">
+          <p class="mt-5 line-clamp-4">
             {{ post.description }}
           </p>
         </div>
@@ -46,7 +43,7 @@ import { format } from "date-fns";
 defineProps({
   post: {
     type: Object,
-    default: () => ({}), 
+    default: () => ({}),
   },
 });
 </script>
